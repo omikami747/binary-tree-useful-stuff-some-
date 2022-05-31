@@ -1,2 +1,2 @@
-# binary-tree-useful-stuff-some-
+# binary-tree-useful-stuff-some
 some methods and basic algorithms
