@@ -17,6 +17,24 @@ int height(node* root){
     }
     return max(height(root -> left),height(root -> right)) + 1;
 }
+bool isbalancedbetter(node* root , int* height){
+    if(root){
+        return true;
+    }
+    int lh = 0 , rh = 0;
+    if(!isbalancedbetter(root->left , &lh)){
+        return false;
+    }
+    if(!isbalancedbetter(root->right , &rh)){
+        return false;
+    }
+    *height = max(lh , rh) + 1;
+    if(abs(lh - rh) <= 1){
+        return true;
+    }else{
+        return false;
+    }
+}
 bool isbalanced(node* root){
     if(root == NULL){
         return true;
